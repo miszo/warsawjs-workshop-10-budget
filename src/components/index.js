@@ -1,13 +1,15 @@
 import HelloStateless from './hello-stateless';
 import HelloStateful from './hello-stateful';
 import Counter from './counter';
-import TransactionCard from './transaction-card';
+import TransactionForm from './transaction-form';
 import TransactionList from './transaction-list';
+import TransactionCard from './transaction-card';
 
 export {
   HelloStateless,
   HelloStateful,
   Counter,
-  TransactionCard,
-  TransactionList
+  TransactionForm,
+  TransactionList,
+  TransactionCard
 }

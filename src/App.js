@@ -42,6 +42,17 @@ class App extends Component {
     });
   };
 
+  addTransactionHandler = (item) => {
+    const { transactions } = this.state;
+    const nextIndex = Math.random().toString(36).substring(7)
+    this.setState({
+      transactions: [
+        { id: nextIndex, ...item },
+        ...transactions
+      ]
+    });
+  };
+
   render() {
     const { transactions } = this.state;
 
@@ -52,7 +63,8 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <TransactionList items={transactions}
-                         onRemoveTransaction={this.removeTransactionHandler}/>
+                         onRemoveTransaction={this.removeTransactionHandler}
+                         onAddTransaction={this.addTransactionHandler}/>
       </div>
     );
   }
