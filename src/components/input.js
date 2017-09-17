@@ -7,7 +7,8 @@ const Input = ({name, type='text', value, onChange, ...other}) => (
     <input type={type}
            placeholder={name}
            value={value}
-           onChange={(e) => onChange(name.toLowerCase(), e.target.value) }/>
+           onChange={(e) => onChange(name.toLowerCase(), e.target.value) }
+           {...other}/>
   </label>
 );
 
